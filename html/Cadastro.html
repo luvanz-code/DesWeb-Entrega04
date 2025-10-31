@@ -161,6 +161,22 @@
             <p class="mt-6 text-sm text-gray-400">&copy; 2025 Ong Água Limpa para Todos. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="../javascript/index.js"></script>
+    
+    <script> 
+        document.addEventListener("DOMContentLoaded", () => { 
+            const toggle = document.getElementById("darkModeToggle"); 
+            const body = document.body; 
+            if (localStorage.getItem("darkMode") === "true") { 
+                body.classList.add("dark"); 
+                toggle.textContent = "☀️"; 
+            } 
+            toggle.addEventListener("click", () => { 
+                body.classList.toggle("dark"); 
+                const ativo = body.classList.contains("dark"); 
+                toggle.textContent = ativo ? "☀️" : "🌙"; 
+                localStorage.setItem("darkMode", ativo); 
+            }); 
+        }); 
+    </script>
 </body>
 </html>

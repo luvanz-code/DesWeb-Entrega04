@@ -176,28 +176,35 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-10 px-6">
-        <div class="container mx-auto text-center">
-            <h3 class="text-xl font-bold mb-2">ONG Água Limpa para Todos</h3>
-            <p class="mb-4">Dignidade que flui, gota a gota.</p>
-            <address class="not-italic">
-                <p><strong>Contato:</strong></p>
-                <p>Email: <a href="mailto:contato@aguaparatodos.org" class="text-blue-400 hover:underline">contato@aguaparatodos.org</a></p>
-                <p>Telefone: <a href="tel:+5511999998888" class="text-blue-400 hover:underline">(41) 9 8765-4321</a></p>
-                <p>Rua da Água Potável, 123, Curitiba - PR</p>
-            </address>
-            <p class="mt-6 text-sm text-gray-400">&copy; 2025 Ong Água Limpa para Todos. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
     <footer class="bg-gray-800 text-white py-10 px-6"></footer>
 
     <script src="../javascript/contador.js"></script>
     <script src="../javascript/index.js"></script>
 
-    
+    <script>
+        const toggleButton = document.getElementById('dark-toggle');
+        const body = document.body;
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Carrega preferência salva
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            toggleButton.textContent = '☀️';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        hamburgerButton.addEventListener('click', () => {
+            const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+            hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
-
-    
