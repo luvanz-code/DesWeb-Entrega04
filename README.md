@@ -19,7 +19,7 @@ Git / GitHub (Controle de Versão profissional)
 ✅ Entrega 04: Qualidade, Otimização e Processo Git
 Nesta fase, o código foi finalizado e preparado para produção, cumprindo rigorosos padrões de qualidade.
 
-1. Controle de Versão (Git / GitHub)
+Controle de Versão (Git / GitHub)
 Fluxo de Trabalho: Utilizamos a estratégia GitFlow, separando o desenvolvimento em branches de main e develop e trabalhando em features isoladas (como feature/wcag-acessibilidade).
 
 Histórico Organizado: Todos os commits seguem o padrão semântico (feat:, fix:).
@@ -37,7 +37,7 @@ Alto Contraste: O contraste de cor atende ao mínimo de 4.5:1 exigido.
 
 Modo Escuro (Dark Mode): Implementado para melhorar a usabilidade em ambientes de pouca luz.
 
-3. Otimização para Produção
+Otimização para Produção
 O projeto foi otimizado para garantir um carregamento rápido:
 
 Minificação: O código (HTML, CSS e JavaScript) foi minificado, removendo todos os espaços e comentários desnecessários.
