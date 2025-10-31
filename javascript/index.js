@@ -45,3 +45,5 @@ console.log("index.js carregado com sucesso (com menu e modo escuro).")})
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     </script>
+
+    
